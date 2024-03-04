@@ -4,8 +4,38 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Web Creative Kit</title>
+
+    <meta property="og:site_name" content="Test" />
+    <meta property="og:title" content="The Fastest Way to Share a Moment!" />
+    <!-- The following are optional -->
+    <meta property="snapchat:sticker" content="/jornali-sticker.png" />
+    <meta
+      property="snapchat:app_id"
+      content="6da477b4-c607-4476-b8a0-c6991877b312"
+    />
+    <meta property="snapchat:publisher_id" content="YOUR_PUBLISHER_ID_HERE" />
   </head>
   <body>
     <h1>Hi</h1>
+    <div
+      class="snapchat-creative-kit-share"
+      data-theme="dark"
+      data-size="large"
+      data-text="false"
+      data-share-url="https://www.jornali.com"
+    ></div>
+
+    <script>
+      // Load the SDK asynchronously
+      (function (d, s, id) {
+        var js,
+          sjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "https://sdk.snapkit.com/js/v1/create.js";
+        sjs.parentNode.insertBefore(js, sjs);
+      })(document, "script", "snapkit-creative-kit-sdk");
+    </script>
   </body>
 </html>
